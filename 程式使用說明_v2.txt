@@ -1,0 +1,51 @@
+步驟1.爬蟲抓取google圖片資料：
+	google_image_scraping_script.py(Github上原始檔案，來源詳見PDF第9頁)
+	google_image_scraping_script_for_arg.py(自行改良程式)
+	用法：從cmd(命令提示字元)當中輸入指令執行
+	python google_image_scraping_script_for_arg.py 搜尋關鍵字 圖像數量
+	python google_image_scraping_script_for_arg.py 虎斑貓 1000
+	python google_image_scraping_script_for_arg.py 石虎 1000
+    備註：
+	(需搭配chromedriver.exe檔案、python安裝selenium套件使用)
+
+步驟2.擷取臉部特徵：
+	fetch_face.py(程式內設定要執行cat或shihu，設定參數scaleFactor與minNeighbors，設定輸出的資料夾檔名)
+    備註：
+	(需搭配下載好的haarcascade_frontalcatface_extended.xml檔案使用，來源詳見PDF第14頁)
+	(程式執行完後，擷取好的臉部圖片會複製至取名好新的資料夾)
+	(此步驟可選擇自行分割臉部特徵，取代執行fetch_face.py程式)
+
+步驟3.切分訓練測試資料：
+	body_train_test_split.py(設定測試資料佔所有資料的比例test_size，0.2為20%)
+	face_train_test_split.py(資料切分比例設定方式同上，設定來源資料夾名稱)
+    備註：
+	(程式執行完後，切分好的圖片會複製至取名好新的資料夾供模型訓練使用)
+
+步驟4.貓與石虎圖像辨識(CNN模型)：
+	classification_body.py(全身)
+	classification_body_1.py(全身-修改參數)
+	classification_cut_face.py(臉部自行切割)
+	classification_cut_face_1.py(臉部自行切割-修改參數)
+	classification_detect_face.py(臉部偵測)
+    備註：
+	(設定來源資料夾檔名flow_from_directory，設定參數batch_size、epochs)
+	(修改參數部分額外設定units、steps_per_epoch、validation_steps)
+
+步驟2~4程式碼參考並改寫自PDF第11頁所提文獻
+
+資料夾名稱：
+body_dataset(全身模型專用：步驟3切分後，石虎與虎斑貓的資料集)
+catbody(資料處理過後的虎斑貓資料集)
+catface(自行分割臉部的虎斑貓資料集)
+catface1.3-1(步驟2設定scaleFactor=1.3與minNeighbors=1擷取後，輸出的虎斑貓臉部資料集)
+catface1.3-3(步驟2設定scaleFactor=1.3與minNeighbors=3擷取後，輸出的虎斑貓臉部資料集)
+catface1.3-5(步驟2設定scaleFactor=1.3與minNeighbors=5擷取後，輸出的虎斑貓臉部資料集)
+face_dataset(臉部模型專用：步驟3切分後，自行分割臉部的資料集)
+face_dataset1.3-1(臉部模型專用：catface1.3-1與shihuface1.3-1資料夾經步驟3切分後，石虎與虎斑貓臉部的資料集)
+face_dataset1.3-3(臉部模型專用：catface1.3-3與shihuface1.3-3資料夾經步驟3切分後，石虎與虎斑貓臉部的資料集)
+face_dataset1.3-5(臉部模型專用：catface1.3-5與shihuface1.3-5資料夾經步驟3切分後，石虎與虎斑貓臉部的資料集)
+shihubody(資料處理過後的石虎資料集)
+shihuface(自行分割臉部的石虎資料集)
+shihuface1.3-1(步驟2設定scaleFactor=1.3與minNeighbors=1擷取後，輸出的石虎臉部資料集)
+shihuface1.3-3(步驟2設定scaleFactor=1.3與minNeighbors=3擷取後，輸出的石虎臉部資料集)
+shihuface1.3-5(步驟2設定scaleFactor=1.3與minNeighbors=5擷取後，輸出的石虎臉部資料集)
