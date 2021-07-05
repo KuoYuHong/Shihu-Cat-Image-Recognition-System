@@ -26,24 +26,14 @@
 <p align="center">表1 Google圖片爬蟲圖片數量</p>
 
 <p align="center">
-
-|   |石虎|虎斑貓|
-:--|:-:|:-:|
-應抓取數量|1000張|1000張
-實際抓取數量|990張|996張
-
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E8%A1%A81%20Google%E5%9C%96%E7%89%87%E7%88%AC%E8%9F%B2%E5%9C%96%E7%89%87%E6%95%B8%E9%87%8F.png">
 </p>
 
 <p align="center">表2 資料處理後圖片數量</p>
 
-<center>
-
-|   |石虎|虎斑貓|
-:--|:-:|:-:|
-原有圖片數量|990張|996張
-資料處理後圖片數量|339張|631張
-
-</center>
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E8%A1%A82%20%E8%B3%87%E6%96%99%E8%99%95%E7%90%86%E5%BE%8C%E5%9C%96%E7%89%87%E6%95%B8%E9%87%8F.png">
+</p>
 
 #### 2.	實驗成果
 &emsp;&emsp;本研究分為以下四個實驗，實驗一為石虎與虎斑貓全身影像辨識，實驗二使用Haar cascade分類器分割出石虎與虎斑貓的臉部，進行石虎與虎斑貓臉部影像辨識，實驗三為改為自行分割石虎與虎斑貓的臉部，進行石虎與虎斑貓臉部影像辨識，最後實驗四為使用實驗一的全身影像辨識資料集與實驗三自行分割的臉部資料集進行參數調整，觀察準確率的變化。
@@ -58,7 +48,11 @@
 6. 訓練週期(Epochs)：15
 
 &emsp;&emsp;使用石虎與虎斑貓全身影像資料集進行模型訓練及預測後，石虎與虎斑貓的辨識率落在80.83%~90.78%之間，圖1為石虎與虎斑貓全身影像辨識準確率。<br>
-![圖1 石虎與虎斑貓全身影像辨識準確率.png](https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%961%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E5%85%A8%E8%BA%AB%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87.png)<br>
+
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%961%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E5%85%A8%E8%BA%AB%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87.png">
+</p>
+
 <p align="center">圖1 石虎與虎斑貓全身影像辨識準確率</p>
 
 ##### 實驗二：
@@ -70,39 +64,39 @@
 
 <p align="center">表3 使用Haar cascade分類器前後圖片數量的差異</p>
 
-<center>
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E8%A1%A83%20%E4%BD%BF%E7%94%A8Haar%20cascade%E5%88%86%E9%A1%9E%E5%99%A8%E5%89%8D%E5%BE%8C%E5%9C%96%E7%89%87%E6%95%B8%E9%87%8F%E7%9A%84%E5%B7%AE%E7%95%B0.png">
+</p>
 
-|   |石虎|虎斑貓|
-:-:|:-:|:-:|
-原有圖片數量|339張|631張
-可識別出臉部的圖片數量<br>scaleFactor=1.3, minNeighbors=1|54張|205張
-可識別出臉部的圖片數量<br>scaleFactor=1.3, minNeighbors=3|15張|120張
-可識別出臉部的圖片數量<br>scaleFactor=1.3, minNeighbors=5|2張|79張
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%962%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-Haar%20cascade%E5%8F%83%E6%95%B8scaleFactor%3D1.3%2C%20minNeighbors%3D1.png">
 
-</center>
-
-![圖2 石虎與虎斑貓臉部影像辨識準確率-Haar cascade參數scaleFactor=1.3, minNeighbors=1.png](https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%962%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-Haar%20cascade%E5%8F%83%E6%95%B8scaleFactor%3D1.3%2C%20minNeighbors%3D1.png)<br>
 <p align="center">圖2 石虎與虎斑貓臉部影像辨識準確率-Haar cascade參數scaleFactor=1.3, minNeighbors=1</p>
-![圖3 石虎與虎斑貓臉部影像辨識準確率-Haar cascade參數scaleFactor=1.3, minNeighbors=3.png](https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%963%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-Haar%20cascade%E5%8F%83%E6%95%B8scaleFactor%3D1.3%2C%20minNeighbors%3D3.png)<br>
+
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%963%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-Haar%20cascade%E5%8F%83%E6%95%B8scaleFactor%3D1.3%2C%20minNeighbors%3D3.png">
+</p>
+
 <p align="center">圖3 石虎與虎斑貓臉部影像辨識準確率-Haar cascade參數scaleFactor=1.3, minNeighbors=3</p>
-![圖4 石虎與虎斑貓臉部影像辨識準確率-Haar cascade參數scaleFactor=1.3, minNeighbors=5.png](https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%964%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-Haar%20cascade%E5%8F%83%E6%95%B8scaleFactor%3D1.3%2C%20minNeighbors%3D5.png)<br>
+
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%964%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-Haar%20cascade%E5%8F%83%E6%95%B8scaleFactor%3D1.3%2C%20minNeighbors%3D5.png">
+</p>
+
 <p align="center">圖4 石虎與虎斑貓臉部影像辨識準確率-Haar cascade參數scaleFactor=1.3, minNeighbors=5</p>
 
 ##### 實驗三：
 &emsp;&emsp;由於透過Haar cascade分類器分割出的臉部圖片數量較少，模型難以呈現出臉部辨識情境的效果，因此自行手動分割臉部特徵，來擴充訓練模型使用的資料量，使用自行分割的臉部資料集進行模型訓練及預測後，臉部的辨識率落在86%~92%之間，表4為自行手動分割前後圖片數量的差異，圖5為石虎與虎斑貓臉部影像辨識準確率-自行手動分割圖片。
 <p align="center">表4 自行手動分割前後圖片數量的差異</p>
 
-<center>
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E8%A1%A84%20%E8%87%AA%E8%A1%8C%E6%89%8B%E5%8B%95%E5%88%86%E5%89%B2%E5%89%8D%E5%BE%8C%E5%9C%96%E7%89%87%E6%95%B8%E9%87%8F%E7%9A%84%E5%B7%AE%E7%95%B0.png">
+</p>
 
-|   |石虎|虎斑貓|
-:-:|:-:|:-:|
-原有圖片數量|339張|631張
-Haar cascade分類器分割圖片數量|54張|205張
-自行手動分割後圖片數量|242張|594張
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%965%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-%E8%87%AA%E8%A1%8C%E6%89%8B%E5%8B%95%E5%88%86%E5%89%B2%E5%9C%96%E7%89%87.png">
+</p>
 
-</center>
-
-![圖5 石虎與虎斑貓臉部影像辨識準確率-自行手動分割圖片.png](https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E5%9C%965%20%E7%9F%B3%E8%99%8E%E8%88%87%E8%99%8E%E6%96%91%E8%B2%93%E8%87%89%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E6%BA%96%E7%A2%BA%E7%8E%87-%E8%87%AA%E8%A1%8C%E6%89%8B%E5%8B%95%E5%88%86%E5%89%B2%E5%9C%96%E7%89%87.png)
 <p align="center">圖5 石虎與虎斑貓臉部影像辨識準確率-自行手動分割圖片</p>
 
 ##### 實驗四：
@@ -115,16 +109,9 @@ Haar cascade分類器分割圖片數量|54張|205張
 &emsp;&emsp;參數改良後全身辨識的最低準確率從80.83%提升至85.41%，臉部辨識的最高準確率從92%提升至93.33%，表5為模型調整參數前後兩種模型準確率比較。
 <p align="center">表5 模型調整參數前後兩種模型準確率比較</p>
 
-<center>
-
-|   |全身辨識率|臉部辨識率<br>(自行切割)|
-:-:|:-:|:-:|
-(1)原始參數|80.83%~90.78%|86%~92%
-(2)第二層神經元數量改為256個(原為128個)|75.41%~90.24%|84.67%~93.33%
-(3)修改參數batch_size= 64 (原為32)<br>steps_per_epoch= 60 (原為40)<br>validation_steps= 30 (原為20)|82.96%~90.71%|88.67%~92%
-結合(2)、(3)修改參數方式|85.41%~88.75%|90%~92%
-
-</center>
+<p align="center">
+  <img src="https://github.com/KuoYuHong/Shihu-Cat-Image-Recognition-System/blob/main/README%E5%9C%96%E7%89%87/%E8%A1%A85%20%E6%A8%A1%E5%9E%8B%E8%AA%BF%E6%95%B4%E5%8F%83%E6%95%B8%E5%89%8D%E5%BE%8C%E5%85%A9%E7%A8%AE%E6%A8%A1%E5%9E%8B%E6%BA%96%E7%A2%BA%E7%8E%87%E6%AF%94%E8%BC%83.png">
+</p>
 
 ---
 
